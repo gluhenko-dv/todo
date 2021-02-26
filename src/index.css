@@ -1,67 +1,65 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("./Assets/fonts/Gilroy-Bold.ttf");
-  src: url("./Assets/fonts/Gilroy-Medium.ttf");
+    font-family: "Gilroy";
+    src: url("./Assets/fonts/Gilroy-Bold.ttf");
+    src: url("./Assets/fonts/Gilroy-Medium.ttf");
 }
 
 .items-wrap {
-  margin: 40px 0 0 40px;
+    margin: 40px 0 0 40px;
 }
 /* для элемента input c type="checkbox" */
 .custom-checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
 
 /* для элемента label, связанного с .custom-checkbox */
 .custom-checkbox + label {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
 .custom-checkbox + label::before {
-  content: "";
-  display: inline-block;
-  width: 22px;
-  max-width: 22px;
-  max-height: 22px;
-  height: 22px;
-  border: 1px solid #adb5bd;
-  margin-right: 12px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-  border-radius: 50%;
+    content: "";
+    display: inline-block;
+    width: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    height: 22px;
+    border: 1px solid #adb5bd;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    border-radius: 50%;
 }
 
 .custom-checkbox:checked + label::before {
-  background-image: url("./Assets/Image/check.svg");
+    background-image: url("./Assets/Image/check.svg");
 }
 
 .item-completed {
-  color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 .item {
-  display: flex;
-  margin-top: 31px;
-  height: 24px;
+    display: flex;
+    margin-top: 31px;
+    height: 24px;
 }
 .item-text {
-  margin-left: 14px;
-  cursor: pointer;
+    margin-left: 14px;
+    cursor: pointer;
 }
