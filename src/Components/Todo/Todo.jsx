@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import {Modal} from '../Modal/Modal';
 import {Title, ItemStyled, AddBtn, EditBtn} from '../styled';
@@ -12,6 +12,10 @@ export const ToDo = () => {
     const toggleModal = () => {
         setAddModal(!addModal);
     };
+
+    useEffect(() => {
+        if (!todoList.length) setType(true);
+    }, [todoList.length]);
 
     return (
         <>
