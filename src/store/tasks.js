@@ -38,14 +38,14 @@ const tasks = (state = TASKS, {id, text, isCompleted, type}) => {
                 },
             ];
         case 'COMPLETE_TASK':
-            return [...state].map((task) => {
+            return state.map((task) => {
                 if (task.id === id) task.isCompleted = !task.isCompleted;
                 return task;
             });
         case 'REMOVE_TASK':
-            return [...state].filter((task) => task.id !== id);
+            return state.filter((task) => task.id !== id);
         case 'EDIT_TASK':
-            return [...state].map((task) => {
+            return state.map((task) => {
                 if (task.id === id) task.text = text;
                 return task;
             });
