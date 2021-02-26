@@ -12,7 +12,8 @@ export const Item = ({id, text, isCompleted}) => {
                 value={text}
                 defaultChecked={isCompleted}
             />
-            <label htmlFor={`item-${id}`}>{text}</label>
+            <label htmlFor={`item-${id}`}></label>
+            <span className="item-text">{text}</span>
         </div>
     );
 };

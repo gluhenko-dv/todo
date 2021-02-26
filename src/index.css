@@ -17,7 +17,7 @@ code {
 }
 
 .items-wrap {
-    margin: 40px 0 0 40px;
+    margin: 46px 0 0 40px;
 }
 /* для элемента input c type="checkbox" */
 .custom-checkbox {
@@ -29,21 +29,22 @@ code {
 /* для элемента label, связанного с .custom-checkbox */
 .custom-checkbox + label {
     display: inline-flex;
+    margin: 0;
+    padding: 0;
+
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */
 .custom-checkbox + label::before {
     content: "";
     display: inline-block;
-    width: 22px;
-    max-width: 22px;
-    max-height: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
     border: 1px solid #adb5bd;
-    margin-right: 12px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 50% 50%;
     border-radius: 50%;
 }
 
@@ -57,9 +58,16 @@ code {
 .item {
     display: flex;
     margin-top: 31px;
-    height: 24px;
+    align-items: center;
 }
 .item-text {
-    margin-left: 14px;
     cursor: pointer;
+    max-width: 259px;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    margin-left: 14px;
 }

@@ -11,7 +11,7 @@ export const EditItem = (item) => {
     return (
         <div className={item.isCompleted ? `item item-completed` : `item`}>
             <DeleteBtn onClick={() => dispatch({type: 'REMOVE_TASK', id: item.id})} />
-            <span onClick={toggleModal} className="item-text" htmlFor={`item-${item.id}`}>
+            <span onClick={toggleModal} className="item-text">
                 {item.text}
             </span>
             {addModal && <Modal onClick={toggleModal} {...item} />}
