@@ -16,19 +16,22 @@ export const ToDo = () => {
   return (
     <>
       <Title>Сегодня</Title>
-      <EditBtn onClick={() => setType(!type)}>
-        {type ? `Править` : `Отмена`}
-      </EditBtn>
+
       {todoList.length ? (
-        <div className="items-wrap">
-          {todoList.map((item) =>
-            type ? (
-              <Item {...item} key={item.id} />
-            ) : (
-              <EditItem {...item} key={item.id} />
-            )
-          )}
-        </div>
+        <>
+          <EditBtn onClick={() => setType(!type)}>
+            {type ? `Править` : `Отмена`}
+          </EditBtn>
+          <div className="items-wrap">
+            {todoList.map((item) =>
+              type ? (
+                <Item {...item} key={item.id} />
+              ) : (
+                <EditItem {...item} key={item.id} />
+              )
+            )}
+          </div>
+        </>
       ) : (
         <ItemStyled>Список задач пуст</ItemStyled>
       )}
