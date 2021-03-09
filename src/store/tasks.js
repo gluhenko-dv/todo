@@ -26,7 +26,7 @@ const defaultTasks = [
     },
 ];
 
-localStorage.tasksList ? JSON.stringify(localStorage.tasksList) : JSON.stringify(defaultTasks);
+localStorage.tasksList = '' ? JSON.stringify(localStorage.tasksList) : JSON.stringify(defaultTasks);
 const TASKS = JSON.parse(localStorage.tasksList);
 
 const tasks = (state = TASKS, {id, text, isCompleted, type}) => {
