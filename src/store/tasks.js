@@ -26,9 +26,9 @@ const defaultTasks = [
     },
 ];
 
-localStorage.tasksList = '' ? JSON.stringify(localStorage.tasksList) : JSON.stringify(defaultTasks);
-const TASKS = JSON.parse(localStorage.tasksList);
-
+let TASKS = [];
+if (localStorage.tasksList) TASKS = JSON.parse(localStorage.tasksList);
+else TASKS = defaultTasks;
 const tasks = (state = TASKS, {id, text, isCompleted, type}) => {
     switch (type) {
         case 'ADD_TASK':
